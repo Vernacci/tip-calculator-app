@@ -12,9 +12,12 @@
 --White: hsl(0, 0%, 100%);
 }
 
+* {
+  font-family: 'Space Mono', monospace;
+}
+
 body {
   background-color: var(--Light-grayish-cyan);
-  font-family: 'Space Mono', monospace;
 }
 
 header {
@@ -38,10 +41,87 @@ header p {
 }
 
 .content {
-  background-color: var(--Very-light-grayish-cyan);
+  background-color: var(--White);
   width: 800px;
   height: 400px;
   border-radius: 20px;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content p {
+  color: var(--Dark-grayish-cyan);
+  font-weight: 700;
+}
+
+.btns-container {
+  display: grid;  
+  grid-template-columns: repeat(3, 112px);
+  gap: 10px;
+}
+
+.input-btn {
+  padding: 15px 6px;
+  background-color: var(--Very-dark-cyan);
+  color: var(--Very-light-grayish-cyan);
+  border-radius: 5px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+input {
+  border: none;
+  width: 350px;
+  height: 35px;
+  background-color: var(--Very-light-grayish-cyan);
+  padding: 5px 3px;
+  
+}
+
+input:focus {
+  outline-color: var(--strong-cyan);
+}
+
+.output {
+  background-color: var(--Very-dark-cyan);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.output p {
+  color: var(--Grayish-cyan);
+  margin-top: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.output span {
+  color: var(--Very-light-grayish-cyan);
+  font-weight: 700;
+}
+
+.output h1 {
+  margin-left: 80px;
+  position: relative;
+  top: 20px;
+  display: inline;
+  font-size: 2.5rem;
+  color: var(--strong-cyan);
+}
+
+.reset-container {
+  display: flex;
+  justify-content: center;
+}
+
+.reset-btn {
+  margin-top: 130px;
+  padding: 10px ;
+  width: 330px;
+  border-radius: 5px;
+  border: none;
 }
