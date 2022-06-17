@@ -30,8 +30,7 @@
   </head>
   <body>
     <header>
-      <p>SPLI</p>
-      <p>TTER</p>
+      <img src="./images/logo.svg" alt="SPLITTER">
     </header>
 
     <main>
@@ -39,7 +38,7 @@
         <div class="content">
           <div class="input">
             <p>BILL</p>
-            <input type="number" />
+            <input type="number" class="col-1-input" id="bill-js"/>
             <p>Select Tip %</p>
             <div class="btns-container">
               <button value="1.05" class="input-btn">5%</button>
@@ -47,17 +46,17 @@
               <button value="1.20" class="input-btn">20%</button>
               <button value="1.25" class="input-btn">25%</button>
               <button value="1.30" class="input-btn">30%</button>
-              <button class="custom input-btn">CUSTOM</button>
+              <input type="number" class="custom input-btn" placeholder="CUSTOM"></input>
             </div>
             <p>Number of people</p>
-            <input type="number" />
+            <input type="number" class="col-1-input" id="people-js"/>
           </div>
           <div class="output">
             <span class="tip">Tip Amount</span>
-            <h1 class="result">$0.00</h1>
+            <h1 class="result" id="result-bill">$0.00</h1>
             <p>/ Person</p>
             <span class="tip">Total </span>
-            <h1 class="result">$0.00</h1>
+            <h1 class="result" id="result-people">$0.00</h1>
             <p>/ Person</p>
             <div class="reset-container">
               <button class="reset-btn">RESET</button>
@@ -73,5 +72,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Vernacci</a>.
     </footer>
+    <script src="./JS/app.js"></script>
   </body>
 </html>
