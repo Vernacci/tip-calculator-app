@@ -74,7 +74,7 @@ header {
 .col-1-input {
   border: none;
   width: 350px;
-  height: 35px;
+  height: 35px; 
   background-color: var(--Very-light-grayish-cyan);
   padding: 5px 3px;
   
@@ -126,4 +126,8 @@ input:focus {
   color: var(--Very-dark-cyan);
   font-weight: 700;
   font-size: 1.1rem;
+}
+
+.reset-btn:hover {
+  cursor: pointer;
 }
