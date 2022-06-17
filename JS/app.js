@@ -8,8 +8,7 @@ const resultBill = document.querySelector('#result-bill');
 
 buttons.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    const result = (billInput.value * e.target.value) / peopleInput.value;
+    const result = (billInput.value * btn.value) / peopleInput.value;
     resultPeople.textContent = `$${result.toFixed(2)}`;
-    console.log(btn.value);
   });
 });
