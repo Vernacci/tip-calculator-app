@@ -6,15 +6,23 @@ const resetBtn = document.querySelector('.reset-btn');
 const resultPeople = document.querySelector('#result-people');
 const resultBill = document.querySelector('#result-bill');
 
+let result;
+let customResult;
+let customValue;
+
 buttons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    const result = (billInput.value * btn.value) / peopleInput.value;
+    result = (billInput.value * btn.value) / peopleInput.value;
     resultPeople.textContent = `$${result.toFixed(2)}`;
   });
 });
 
 customInput.addEventListener('click', () => {
-  let customValue = customInput.value / 100 + 1;
-  const customResult = (billInput.value * customValue) / peopleInput.value;
+  customValue = customInput.value / 100 + 1;
+  customResult = (billInput.value * customValue) / peopleInput.value;
   resultPeople.textContent = `$${customResult.toFixed(2)}`;
+});
+
+resetBtn.addEventListener('click', () => {
+  resultPeople.textContent = '$0.00';
 });
