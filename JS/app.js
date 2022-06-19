@@ -24,5 +24,10 @@ customInput.addEventListener('click', () => {
 });
 
 resetBtn.addEventListener('click', () => {
+  result = 0;
+  customInput.value = 0;
+  customResult = 0;
   resultPeople.textContent = '$0.00';
+  billInput.value = 0;
+  peopleInput.value = 1;
 });
