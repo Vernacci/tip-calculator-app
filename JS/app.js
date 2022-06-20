@@ -15,7 +15,7 @@ buttons.forEach((btn) => {
   btn.addEventListener('click', () => {
     let value = Number(btn.value);
     tipAmount = (billInput.value * (value / 100)) / peopleInput.value;
-    tip.textContent = tipAmount.toFixed(2);
+    tip.textContent = `$${tipAmount.toFixed(2)}`;
     total = (billInput.value * (value / 100 + 1.0)) / peopleInput.value;
     resultPeople.textContent = `$${total.toFixed(2)}`;
   });
@@ -31,7 +31,9 @@ resetBtn.addEventListener('click', () => {
   total = 0;
   customInput.value = '';
   customResult = 0;
+  tipAmount = 0;
   resultPeople.textContent = '$0.00';
   billInput.value = 0;
+  tip.textContent = '$0.00';
   peopleInput.value = 1;
 });
