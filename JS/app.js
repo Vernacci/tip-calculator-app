@@ -3,17 +3,21 @@ const billInput = document.querySelector('#bill-js');
 const peopleInput = document.querySelector('#people-js');
 const customInput = document.querySelector('.custom');
 const resetBtn = document.querySelector('.reset-btn');
-const resultPeople = document.querySelector('#result-people');
-const resultBill = document.querySelector('#result-bill');
+const resultPeople = document.querySelector('#total');
+const tip = document.querySelector('#tip-amount');
 
-let result;
+let total;
 let customResult;
 let customValue;
+let tipAmount;
 
 buttons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    result = (billInput.value * btn.value) / peopleInput.value;
-    resultPeople.textContent = `$${result.toFixed(2)}`;
+    let value = Number(btn.value);
+    tipAmount = (billInput.value * (value / 100)) / peopleInput.value;
+    tip.textContent = tipAmount.toFixed(2);
+    total = (billInput.value * (value / 100 + 1.0)) / peopleInput.value;
+    resultPeople.textContent = `$${total.toFixed(2)}`;
   });
 });
 
@@ -24,8 +28,8 @@ customInput.addEventListener('click', () => {
 });
 
 resetBtn.addEventListener('click', () => {
-  result = 0;
-  customInput.value = 0;
+  total = 0;
+  customInput.value = '';
   customResult = 0;
   resultPeople.textContent = '$0.00';
   billInput.value = 0;
