@@ -206,6 +206,6 @@ input:focus {
   }
 
   .btns-container {
-    grid-template-columns: repeat(3, 80px);
+    grid-template-columns: repeat(3, 100px);
   }
 }
