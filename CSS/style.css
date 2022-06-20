@@ -64,20 +64,44 @@ header {
   font-size: 1.1rem;
   cursor: pointer;
   font-weight: 700;
+  transition: all 0.3s;
+}
+
+.input-btn:hover {
+  background-color: hsl(173, 61%, 77%);
+  color: var(--Very-dark-cyan);
+}
+
+.input-btn:focus {
+  background-color: hsl(173, 61%, 77%);
+  color: var(--Very-dark-cyan);
 }
 
 .custom {
   background-color: var(--Very-light-grayish-cyan);
   color: var(--Dark-grayish-cyan);
+  text-align: right;
 }
 
 .col-1-input {
   border: none;
   width: 350px;
   height: 35px; 
-  background-color: var(--Very-light-grayish-cyan);
   padding: 5px 3px;
-  
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--Very-dark-cyan);
+}
+
+#bill-js {
+  background: url('../images/icon-dollar.svg') no-repeat left , var(--Very-light-grayish-cyan);
+  background-position-x: 3%;
+}
+
+#people-js {
+  background: url('../images/icon-person.svg') no-repeat left , var(--Very-light-grayish-cyan);
+  background-position-x: 3%;
 }
 
 input:focus {
@@ -126,8 +150,63 @@ input:focus {
   color: var(--Very-dark-cyan);
   font-weight: 700;
   font-size: 1.1rem;
+  transition: all 0.3s;
 }
 
 .reset-btn:hover {
   cursor: pointer;
+  background-color: hsl(173, 61%, 77%);
+}
+
+@media (max-width: 780px) {
+
+  .container {
+    height: 900px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    height: 790px;
+    width: 490px;
+
+  }
+
+  .output {
+    width: 470px;
+  }
+
+  .col-1-input {
+    width: 470px;
+  }
+
+  .btns-container {
+    grid-template-columns: repeat(3, 150px);
+  }
+}
+
+@media (max-width: 540px) {
+
+  .container {
+    height: 900px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    height: 790px;
+    width: 360px;
+
+  }
+
+  .output {
+    width: 340px;
+    font-size: 0.9rem;
+  }
+
+  .col-1-input {
+    width: 340px;
+  }
+
+  .btns-container {
+    grid-template-columns: repeat(3, 100px);
+  }
 }
