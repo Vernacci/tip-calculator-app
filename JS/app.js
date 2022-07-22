@@ -21,7 +21,7 @@ buttons.forEach((btn) => {
   });
 });
 
-customInput.addEventListener('click', () => {
+customInput.addEventListener('change', () => {
   customValue = customInput.value / 100 + 1;
   customResult = (billInput.value * customValue) / peopleInput.value;
   resultPeople.textContent = `$${customResult.toFixed(2)}`;
