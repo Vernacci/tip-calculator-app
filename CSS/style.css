@@ -127,12 +127,19 @@ input:focus {
 }
 
 .output h1 {
-  margin-left: 80px;
   position: relative;
   top: 20px;
   display: inline;
   font-size: 2.5rem;
   color: var(--strong-cyan);
+}
+
+.result-value {
+  margin-left: 150px;
+}
+
+.tip-value {
+  margin-left: 102px;
 }
 
 .reset-container {
@@ -217,4 +224,9 @@ input:focus {
   .btns-container {
     grid-template-columns: repeat(2, 160px);
   }
+
+  .tip-value {
+    margin-left: 150px;
+  }
+
 }
